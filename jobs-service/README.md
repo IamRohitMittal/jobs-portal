@@ -1,5 +1,5 @@
 ```sh
-$ cd user-service
+$ cd jobs-service
 $ npm install 
 $ npm start
 ```
