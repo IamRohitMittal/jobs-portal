@@ -1,0 +1,135 @@
+{
+	"variables": [],
+	"info": {
+		"name": "job-service",
+		"_postman_id": "7c1adfe9-974f-7d43-5533-d0e76dbe8587",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Job",
+			"request": {
+				"url": "{{jobURL}}jobs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\":\"Messachussets Tech\",\n\t\"role\":\"Developer\",\n\t\"pkg\":\"3\",\n\t\"skillset\":\"JS, Node.js, React.js\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Jobs",
+			"request": {
+				"url": "{{jobURL}}jobs/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Job",
+			"request": {
+				"url": "{{jobURL}}jobs/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Job by Id",
+			"request": {
+				"url": "{{jobURL}}jobs/4",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\":\"Tata Consultancy Service\",\n\t\"role\":\"Sr Lead\",\n\t\"pkg\":\"12\",\n\t\"skillset\":\"JS, Node.js, React.js\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create New User",
+			"request": {
+				"url": "{{jobURL}}user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Rohit\",\n\t\"email\":\"rohitmittal204@gmail.com\",\n\t\"password\":\"Rohit123@\",\n\t\"roleId\":1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "{{jobURL}}login",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Application",
+			"request": {
+				"url": "{{jobURL}}apply-for-job",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobId\":1,\n\t\"userId\":1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List of JobApplications",
+			"request": {
+				"url": "{{jobURL}}applications",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
